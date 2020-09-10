@@ -94,6 +94,7 @@
       - libstdc++-devel*i686 
       - libaio-devel*i686 
       - libstdc++*i686 
+      - libgcc
       - libgcc*i686 
       - libaio*i686 
       - glibc-devel*i686 
