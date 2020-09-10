@@ -1,0 +1,101 @@
+---
+
+#  - name: Vérification de la distribution, la version et le kernel
+#    assert:
+#      that: ansible_distribution_major_version == '7' and ansible_os_family == 'RedHat' and ansible_kernel >= '3.8.13'
+#    tags: oscheck
+
+  # ---------------------------------------------------
+  # configuration des packages necessaires pour Linux
+  # ---------------------------------------------------
+  - include: os_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration réseau
+  # ---------------------------------------------------
+  - include: network_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration Linux : Utilisateurs et groupes
+  # ---------------------------------------------------
+  - include: users_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration Linux : Paramètres du kernel
+  # ---------------------------------------------------
+  - include: kernel_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration Linux : grub
+  # ---------------------------------------------------
+  - include: grub_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration Linux : Personnalisation
+  # ---------------------------------------------------
+  - name: Ajout du fichier z_oracle dans /etc/profile.d
+    copy: src=z_oracle.sh dest=/etc/profile.d/z_oracle.sh owner=root mode=644
+    tags: z_oracle
+
+  # ---------------------------------------------------
+  # configuration Linux : Sécurisation
+  # ---------------------------------------------------
+#  - include: secure_configuration.yml
+
+  # ---------------------------------------------------
+  # configuration des packages necessaires pour Oracle
+  # ---------------------------------------------------
+  - name: Installation des packages pour Oracle
+    yum: name={{ packages }} state=installed skip_broken=true
+#    with_items: 
+    vars:
+      packages:
+        - binutils
+        - compat-libcap1
+        - compat-libstdc++*i686
+        - compat-libstdc++-33
+        - elfutils-libelf-devel
+        - gcc
+        - gcc-c++
+        - glibc
+        - glibc*i686
+        - glibc-devel
+        - glibc-devel*i686 
+        - kernel-headers
+        - ksh
+        - libaio
+        - libaio*i686 
+        - libaio-devel
+        - libaio-devel*i686 
+        - libgcc*i686 
+        - libgcc*x86_64
+        - libstdc++
+        - libstdc++*i686
+        - libstdc++-devel
+        - libstdc++-devel*i686 
+        - libXi
+        - libXi*i686 
+        - libXtst
+        - libXtst*i686 
+        - make
+        - mksh
+        - smartmontools
+        - sysstat
+        - unixODBC
+    tags: os_packages
+#    when: install_os_packages and internet_connection
+
+  # ---------------------------------------------------
+  # configuration Linux : Création des répertoires Oracle
+  # ---------------------------------------------------
+#  - include: creation_repertoire.yml
+
+  # ---------------------------------------------------
+  # Securisation de cron
+  # ---------------------------------------------------
+  - name: Desactivation de la commande crontab -r 
+    lineinfile: dest=/etc/profile.d/you.sh
+          line='crontab () { [[ $@ =~ -[iel]*r ]] && echo "option -r (remove) not allowed" || command crontab "$@" ;}'
+          state=present
+          create=yes
+

@@ -1,0 +1,127 @@
+# Common playbook - configuratiom du serveur pour l'installation d'Oracle
+---
+
+  - name: Vérification de la distribution, la version et le kernel
+    assert:
+      that: ansible_distribution_major_version == '6' and ansible_os_family == 'RedHat' and ansible_kernel >= '2.6.32'
+    tags: oscheck
+
+
+  # --------------------------------------------------- 
+  # configuration des packages necessaires pour Linux
+  # ---------------------------------------------------
+  - include: os_configuration.yml
+
+  # --------------------------------------------------- 
+  # configuration réseau
+  # ---------------------------------------------------
+  - include: network_configuration.yml
+
+  # --------------------------------------------------- 
+  # configuration Linux : Utilisateurs et groupes
+  # ---------------------------------------------------
+  - include: users_configuration.yml 
+
+  # --------------------------------------------------- 
+  # configuration Linux : Paramètres du kernel
+  # ---------------------------------------------------
+  - include: kernel_configuration.yml
+
+  # --------------------------------------------------- 
+  # configuration Linux : grub
+  # ---------------------------------------------------
+  - include: grub_configuration.yml
+
+  # --------------------------------------------------- 
+  # configuration Linux : Personnalisation
+  # ---------------------------------------------------
+  - name: Ajout du fichier z_oracle dans /etc/profile.d
+    copy: src=z_oracle.sh dest=/etc/profile.d/z_oracle.sh owner=root mode=644
+    tags: z_oracle
+
+  # --------------------------------------------------- 
+  # configuration Linux : Sécurisation
+  # ---------------------------------------------------
+  - include: secure_configuration.yml
+
+  # --------------------------------------------------- 
+  # configuration des packages necessaires pour Oracle
+  # ---------------------------------------------------
+  - name: Installation des packages pour Oracle
+    yum: name={{ item }} state=installed
+    with_items: 
+      - bind-utils
+      - binutils
+      - btrfs-progs
+      - cloog-ppl
+      - compat-libcap1
+      - compat-libstdc++*i686
+      - compat-libstdc++-33
+      - cpp
+      - ethtool
+      - gcc
+      - gcc-c++
+      - glibc
+      - glibc*i686
+      - glibc-devel
+      - glibc-headers
+      - kernel-headers
+      - kmod-oracleasm
+      - ksh
+      - libaio
+      - libaio*i686
+      - libaio-devel
+      - libaio-devel*i686
+      - libgcc
+      - libselinux-python
+      - libstdc++
+      - libstdc++*i686
+      - libstdc++-devel
+      - libstdc++-devel*i686
+      - libtool-ltdl
+      - libX11
+      - libX11*i686
+      - libXau
+      - libXau*i686
+      - libxcb
+      - libxcb*i686
+      - libXext
+      - libXi
+      - libXp
+      - libXt
+      - libXtst
+      - make
+      - module-init-tools
+      - mpfr
+      - ncurses-devel
+      - ncurses-libs
+      - nfs-utils
+      - nscd
+      - ntp
+      - openssh-clients
+      - oracleasm-support
+      - parted
+      - ppl
+      - procps
+      - readline
+      - readline-devel
+      - sysstat
+      - twm
+      - unixODBC
+      - util-linux-ng
+      - vim-enhanced
+      - xdpyinfo
+      - xfsprogs
+      - xorg-x11-utils
+      - xorg-x11-xauth
+      - xorg-x11-xinit
+      - xsetroot
+      - xterm
+    when: install_os_packages and internet_connection
+    tags: os_packages
+
+  # --------------------------------------------------- 
+  # configuration Linux : Création des répertoires Oracle
+  # ---------------------------------------------------
+#  - include: creation_repertoire.yml
+

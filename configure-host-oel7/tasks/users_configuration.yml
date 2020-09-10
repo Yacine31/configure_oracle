@@ -1,0 +1,34 @@
+---
+  # --------------------------------------------------- 
+  # configuration Linux : Utilisateurs et groupes
+  # ---------------------------------------------------
+ 
+  - name: Creation des groupes
+    group: name={{ item.group }} gid={{ item.gid }} state=present
+    with_items: 
+      - { group: asmdba, gid: 1004 }
+      - { group: asmoper, gid: 1005 }
+      - { group: asmadmin, gid: 1003 }
+      - { group: oinstall, gid: 1000}
+      - { group: dba, gid: 1001 }
+      - { group: backupdba, gid: 1006 }
+      - { group: oper, gid: 1002 }
+      - { group: dgdba, gid: 1007 }
+      - { group: kmdba, gid: 1008 }
+    tags: group
+
+  - name: Creation du compte Oracle
+    user: name={{ item.username }}  group={{ item.primgroup }} groups={{ item.othergroups }} uid={{ item.uid }} generate_ssh_key=yes append=yes state=present password={{ item.passwd }}
+    with_items: 
+      - { username: oracle, uid: 1001, primgroup: oinstall, othergroups: "dba,asmdba,backupdba,dgdba,kmdba,oper", passwd: "$6$0xHoAXXF$K75HKb64Hcb/CEcr3YEj2LGERi/U2moJgsCK.ztGxLsKoaXc4UBiNZPL0hlxB5ng6GL.gyipfQOOXplzcdgvD0" }
+      - { username: grid, uid: 1000, primgroup: oinstall, othergroups: "asmadmin,asmdba,asmoper,dba", passwd: "$6$0xHoAXXF$K75HKb64Hcb/CEcr3YEj2LGERi/U2moJgsCK.ztGxLsKoaXc4UBiNZPL0hlxB5ng6GL.gyipfQOOXplzcdgvD0" }
+    tags: user
+
+  - name: Ajout du compte oracle et grid au sudoers
+    template: src=sudoers.j2 dest=/etc/sudoers.d/{{ item }} owner=root mode=0600
+    with_items:
+      - oracle
+      - grid
+    when: configure_oracle_sudo
+    tags: sudoadd
+

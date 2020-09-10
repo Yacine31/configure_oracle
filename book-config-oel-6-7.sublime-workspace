@@ -1,0 +1,846 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"el",
+				"else"
+			],
+			[
+				"st",
+				"sticky\tposition"
+			],
+			[
+				"block",
+				"block\tdisplay"
+			],
+			[
+				"fil",
+				"filter.\tfilter (block)"
+			],
+			[
+				"Entity",
+				"EntityType"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"Ser",
+				"ServeurName"
+			],
+			[
+				"domaine",
+				"domain-version"
+			],
+			[
+				"instan",
+				"instances"
+			],
+			[
+				"find",
+				"findBy"
+			],
+			[
+				"repo",
+				"repoInstance"
+			],
+			[
+				"tab",
+				"table-primary"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"ent",
+				"Entity"
+			],
+			[
+				"Serve",
+				"ServeurFixture"
+			],
+			[
+				"Phy",
+				"setPhysicalServer"
+			],
+			[
+				"server",
+				"serveur"
+			],
+			[
+				"Server",
+				"ServeurRepository"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"PRIM",
+				"PRIM_DB_UNIQUE_NAME"
+			],
+			[
+				"STB",
+				"STBY_DB_UNIQUE_NAME"
+			],
+			[
+				"ST",
+				"STBY_DB_UNIQUE_NAME"
+			],
+			[
+				"DB",
+				"DB_NAME"
+			],
+			[
+				"PRI",
+				"PRIM_DB_UNIQUE_NAME"
+			],
+			[
+				"gr",
+				"group"
+			],
+			[
+				"remo",
+				"remote_host"
+			],
+			[
+				"ex",
+				"exploir_dir"
+			],
+			[
+				"ou",
+				"output_file"
+			],
+			[
+				"rman_",
+				"rman_backup_report"
+			],
+			[
+				"lin",
+				"lineinfile"
+			],
+			[
+				"glo",
+				"glogin_vars"
+			],
+			[
+				"RUNN",
+				"RUNNING_BKP"
+			],
+			[
+				"RUN",
+				"RUNNING_BKP"
+			],
+			[
+				"std",
+				"stdout"
+			],
+			[
+				"invento",
+				"inventory_loc"
+			],
+			[
+				"oracle",
+				"oracle_home"
+			],
+			[
+				"scrip",
+				"scripts_dir"
+			],
+			[
+				"expo",
+				"exploit_dir"
+			],
+			[
+				"show",
+				"show_alert"
+			],
+			[
+				"F",
+				"File_Name"
+			],
+			[
+				"FR",
+				"FREE_MB"
+			],
+			[
+				"MYSQ",
+				"MYSQL_BIN"
+			],
+			[
+				"tsi",
+				"tsid_maj"
+			],
+			[
+				"ts",
+				"tsid_maj"
+			],
+			[
+				"f_",
+				"f_print"
+			],
+			[
+				"LOG",
+				"LOG_FILE"
+			],
+			[
+				"LO",
+				"LOG_FILE"
+			],
+			[
+				"ORACLE",
+				"ORACLE_SID"
+			],
+			[
+				"P",
+				"PREFER"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"ad",
+				"advcomp"
+			],
+			[
+				"pro",
+				"Processor_Type"
+			],
+			[
+				"yo",
+				"you_dba_feature"
+			],
+			[
+				"p",
+				"pdb"
+			],
+			[
+				"physi",
+				"physical_server"
+			],
+			[
+				"v_c",
+				"v_cpu_aix_lpar"
+			],
+			[
+				"ta",
+				"table_name"
+			],
+			[
+				"host",
+				"host_name"
+			],
+			[
+				"hot",
+				"host_name"
+			],
+			[
+				"i",
+				"itoto"
+			],
+			[
+				"stock",
+				"s_stock"
+			],
+			[
+				"lib",
+				"lbarti"
+			],
+			[
+				"I",
+				"IF"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"fa",
+				"fast_recovery_area"
+			],
+			[
+				"Insta",
+				"InstallDir"
+			],
+			[
+				"device",
+				"device_file"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "fs.aio-max-nr = 1048576\nfs.file-max = 6815744\n\n\n===\nInstallation des sauvegardes \n\n",
+			"settings":
+			{
+				"buffer_size": 83,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "https://wwv.papseries.net/series/\n\n\nmv 'Voir la série Les Experts Saison 8 Episode 1 en streaming VF.mp4' 'CSI.Las.Vegas.S08E01.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 2 en streaming VF.mp4' 'CSI.Las.Vegas.S08E02.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 3 en streaming VF.mp4' 'CSI.Las.Vegas.S08E03.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 4 en streaming VF.mp4' 'CSI.Las.Vegas.S08E04.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 5 en streaming VF.mp4' 'CSI.Las.Vegas.S08E05.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 6 en streaming VF.mp4' 'CSI.Las.Vegas.S08E06.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 7 en streaming VF.mp4' 'CSI.Las.Vegas.S08E07.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 8 en streaming VF.mp4' 'CSI.Las.Vegas.S08E08.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 9 en streaming VF.mp4' 'CSI.Las.Vegas.S08E09.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 10 en streaming V.mp4' 'CSI.Las.Vegas.S08E10.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 11 en streaming V.mp4' 'CSI.Las.Vegas.S08E11.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 12 en streaming V.mp4' 'CSI.Las.Vegas.S08E12.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 13 en streaming V.mp4' 'CSI.Las.Vegas.S08E13.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 14 en streaming V.mp4' 'CSI.Las.Vegas.S08E14.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 15 en streaming V.mp4' 'CSI.Las.Vegas.S08E15.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 16 en streaming V.mp4' 'CSI.Las.Vegas.S08E16.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 17 en streaming V.mp4' 'CSI.Las.Vegas.S08E17.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 18 en streaming V.mp4' 'CSI.Las.Vegas.S08E18.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 19 en streaming V.mp4' 'CSI.Las.Vegas.S08E19.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 20 en streaming V.mp4' 'CSI.Las.Vegas.S08E20.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 21 en streaming V.mp4' 'CSI.Las.Vegas.S08E21.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 22 en streaming V.mp4' 'CSI.Las.Vegas.S08E22.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 23 en streaming V.mp4' 'CSI.Las.Vegas.S08E23.mp4'\nmv 'Voir la série Les Experts Saison 8 Episode 24 en streaming V.mp4' 'CSI.Las.Vegas.S08E24.mp4'\n",
+			"settings":
+			{
+				"buffer_size": 2364,
+				"line_ending": "Unix",
+				"name": "https://wwv.papseries.net/series/"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"bash",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"twi",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set synt",
+				"Set Syntax: YAML"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"bat",
+				"Set Syntax: Batch File"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"bas",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"shell",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/merlin/scripts/configure_oracle",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/preparation/preparation_20190131"
+	],
+	"file_history":
+	[
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/preparation/preparation_20190131/bin/configuration_kernel.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/preparation/preparation_20190131/bin/configuration_rpm.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/vars/oracle_settings.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/install-oracle-sw/tasks/install_database.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/vars/linux_settings.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/tasks/secure_configuration.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/tasks/kernel_configuration.yml",
+		"/home/merlin/scripts/configure_oracle/book-config-oel-6-7.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/tasks/os_configuration.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/tasks/grub_configuration.yml",
+		"/home/merlin/scripts/configure_oracle/readme.txt",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel6/tasks/grub_configuration.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel7/tasks/main.yml",
+		"/home/merlin/scripts/configure_oracle/configure-host-oel6/tasks/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/ansible.bkp/book-config-and-install.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/ansible.bkp/install-oracle-sw/vars/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/ansible.bkp/install-oracle-sw/tasks/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/ansible.bkp/install-oracle-sw/tasks/install_database.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/pihole_config.yaml",
+		"/home/merlin/scripts/configure_oracle/hosts.oracle",
+		"/home/merlin/scripts/screenly-ose-0.18.2/ansible/site.yml",
+		"/home/merlin/scripts/ansible_portable/ansible/book-config-oel-6-7.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/terminal_output.txt",
+		"/home/merlin/scripts/ansible_portable/book-config-oel-6-7.yml",
+		"/home/merlin/scripts/screenly-ose-0.18.2/README.md",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/book-config-oel-6-7.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/you_things_todo.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Repository/InstanceRepository.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Controller/InstanceController.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/instance/_filter.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Form/SearchForm.php",
+		"/home/merlin/Bureau/android/SMSBackupRestore/sms-2018-06-29 14-42-32.xml",
+		"/tmp/2-IPTV France M3u Liste Channels.m3u.html",
+		"/tmp/adult-freeiptvservercom-24-12-2019-3.m3u.html",
+		"/media/merlin/windows/Users/youmghar/Documents/rsync_win10.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/instance/index.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/base.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Data/SearchData.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Entity/Instance.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Form/SearchData.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/lms_scripts.you/wls_v4_DILA.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/lms_scripts.you/weblogic_2019_12_02.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Controller/ServerController.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/server/index.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/Acme/AcmeBundle/Command/ImportCommand.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/server/show.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/DataFixtures/ServeurFixtures.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Entity/Serveur.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/instance/create.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Form/InstanceType.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Form/ServeurType.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/instance/show.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/server/create.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Migrations/Version20191201045108.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/Controller/AuditController.php",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/config/packages/twig.yaml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/.env",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/home.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/audit/server_create.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/audit/serveurs.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/audit/server_update.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/server/home.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/terminal_output.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/audit/index.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/templates/audit/home.html.twig",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/symfony_lms/auditLMS/src/DataFixtures/ServeurFixture.php",
+		"/home/merlin/Documents/ch_perpi/backup_rman_DBCW_DB_20190409-0010.log",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2019_03_27_MeP/srvora18.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2019_06_04_MeP/docs_yacine/mes_notes_svora18.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2019_06_04_MeP/docs_yacine/term_output_svora18.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2019_06_04_MeP/docs_yacine/term_output_svora15.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2019_06_04_MeP/docs_yacine/mes_notes_svora15.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/LIEBHERR/2018_10_Migration_DB/mes_notes.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_05_Installation_ODA-X7-2M/xterm/ODA-RDL_20190516_155257.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_05_Installation_ODA-X7-2M/xterm/MobaXterm_drivescUsersyoumgharDownloads_20190516_150703.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_05_Installation_ODA-X7-2M/xterm/ODA-BCH_20190516_155315.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/Mairie Blagnac/2019_05_Scripts_RMAN/SORACLET/Scripts/mysql_clone.bat",
+		"/home/merlin/Documents/ch_perpi/sortie_rman.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_07_Import_et Dataguard/mes_notes.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/XPO/Connexion via VPN GlobalProtect.txt",
+		"/home/merlin/Documents/Paul_Scripts/XPO/create-PRVPFR.sql",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/opatch_apply.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/tasks/kernel_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/vars/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/templates/sudoers.j2",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/tasks/users_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/tasks/os_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/secure_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/grub_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/tasks/grub_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel7/tasks/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/pihole_update_listes.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/remove_mailto_from_cron.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/users_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/kernel_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/main.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/ansible/configure-host-oel6/tasks/os_configuration.yml",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/Habitat_Toulouse/2019_10_MCO/clonage_base.bat",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/Habitat_Toulouse/2019_10_MCO/mes_notes_ODS_DWH.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/Habitat_Toulouse/2019_10_MCO/nagios_plugins.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/Habitat_Toulouse/2019_10_MCO/Ticket 152876.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/redolog_freq_switch.sql",
+		"/home/merlin/cozy_drive/Docs/Grafana Oracle.txt",
+		"/home/merlin/Documents/assistants_dataguard/oda_derby_database.txt",
+		"/home/merlin/Documents/assistants_dataguard/socr_dataguard.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/XPO/2019_08_08_creation_MTCKPP6T/creation_base_MCTKPP6T.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/XPO/2019_08_21/PRHMPL5T_timeout.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/XPO/2019_08_21/2019_08_23/nb_objets_par_schema.txt",
+		"/home/merlin/scripts/backup_this_vm_2_quark.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD23/SR_Oracle__2019_11_14/Mes_notes.txt",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/DILA/2019_06_SAM/Collection_FMW/parse_registry.csv",
+		"/home/merlin/tmp/contacts_sr_gmail.csv",
+		"/home/merlin/tmp/SR_Recup/all_contacts.csv",
+		"/home/merlin/tmp/SR_Recup/you_all_sms_05.10.2019.csv",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_10_28_Dataguard/index_dg_linux_12c.html",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_10_28_Dataguard/index_dg_linux_12c (copie).html",
+		"/home/merlin/tmp/samsung_s2/Repair2/pit_files/YOU_I91001GB_4GB.pit",
+		"/media/merlin/windows/Users/youmghar/Documents/Axiome/Projets/CD84/2019_10_28_Dataguard/MobaXterm_a-oda-rdl_20191030_170546.rtf",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/Duplicate_database.sh",
+		"/home/merlin/Documents/Paul_Scripts/XPO/create ARCISFRT.sql",
+		"/home/merlin/tmp/SR_Recup/SMSBackupRestore/sms-20180224190428.xml",
+		"/home/merlin/tmp/SR_Recup/YOU_backup_to_be_deleted.xml",
+		"/home/merlin/tmp/SR_Recup/calls_modifié.xml",
+		"/home/merlin/tmp/SR_Recup/calls.xml",
+		"/media/merlin/1F88-5838/00001.vcf",
+		"/home/merlin/tmp/export_contacts.csv",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/rman_backup_report.sh",
+		"/media/merlin/windows/Users/youmghar/Documents/3_Scripts/check_all_rman_backup.sh"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"S05",
+			"Saison 5",
+			"' '",
+			";",
+			"rhgb",
+			"http",
+			"   ",
+			" ;",
+			"  ;",
+			"      ;",
+			"  ;",
+			" ; ",
+			"         ;",
+			"            ;",
+			"       ; ",
+			"|",
+			"Ã©",
+			"        ;",
+			"           ;",
+			" ;",
+			"  ;",
+			"   ;",
+			" ; ",
+			"        ; ",
+			"|",
+			";",
+			"\t",
+			"Web",
+			"Traitement",
+			"Base de données",
+			"enterpriseeee",
+			"enterprise",
+			"standard",
+			"andWhere",
+			"Where",
+			"true",
+			"standard",
+			"string",
+			"p",
+			"\t",
+			"_all/",
+			"========",
+			"Nom de fichier",
+			"DOMAINE=",
+			"VERSION=",
+			"CLUSTER=",
+			"config/config.xml",
+			"./",
+			"_all/",
+			"_all/FMW/domaines/",
+			"SERVERNAME=",
+			"CLUSTER=",
+			"SERVERNAME=",
+			"VERSION=",
+			"DOMAINE=",
+			"_all;",
+			"config/config.xml",
+			"./",
+			"|Cluster",
+			";CLUSTER=",
+			"SERVERNAME=",
+			"VERSION=",
+			"DOMAINE=",
+			"instance.hostname",
+			"instances",
+			"instance",
+			"tr",
+			"h2",
+			"h1",
+			"serveur",
+			"model",
+			"os",
+			"physical",
+			"physical_server",
+			"hostname",
+			"serveur",
+			"Serveur",
+			"server",
+			"this",
+			"formServeur",
+			"server",
+			"Serveur",
+			"serveur",
+			"Serveur",
+			"serveur",
+			"intTotalCores",
+			"server",
+			"instance.",
+			"serveur",
+			"serveur.",
+			"$i",
+			"Database",
+			"`database`",
+			"database",
+			"formWidget",
+			"_",
+			"href",
+			"h2>Nom du serveur",
+			"Dell-E7440:/media/merlin/windows/Users/youmghar/Documents/3_Scripts",
+			"merlin@Dell-E7440:/media/merlin/windows/Users/youmghar/Documents/3_Scripts",
+			"merlin@Dell-E7440:/media/merlin/windows/Users/youmghar/Documents/",
+			"server:",
+			"_all/",
+			"-e",
+			"tp1pec",
+			"PhyscialServer",
+			"CoresPerSocket",
+			"Socket",
+			"hostname",
+			"serveur>",
+			"<serveur",
+			"serveur",
+			"\\",
+			"/",
+			"\\$",
+			"========",
+			"Nom de fichier",
+			",host",
+			"host_name",
+			"name",
+			"from",
+			"select",
+			"$",
+			"myContacts",
+			"Mobile",
+			";",
+			";06",
+			";"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 83,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Bash.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36,
+								36
+							]
+						],
+						"settings":
+						{
+							"auto_name": "https://wwv.papseries.net/series/",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "book-config-oel-6-7.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fon",
+				"fonctions.sh"
+			],
+			[
+				"repo",
+				"reports2xml.sh"
+			],
+			[
+				"fonc",
+				"fonctions.sh"
+			],
+			[
+				"cpu",
+				"calcul_proc.sh"
+			],
+			[
+				"ini",
+				"initdb.sh"
+			],
+			[
+				"load",
+				"loaddata.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 322.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

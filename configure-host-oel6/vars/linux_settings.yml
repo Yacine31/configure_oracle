@@ -1,0 +1,110 @@
+# Fichier de paramètres 
+---
+
+  master_node: true
+  os_family_supported: "RedHat"
+  os_min_supported_version: "6.4"
+  os_supported_version: "6"
+  disable_numa_boot: true
+  disable_selinux: true
+
+  internet_connection: false
+  epel_rpm: "http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm"
+  configure_epel_repo: true
+  secure_configuration: true      # faire une configuration securisee du system d exploitation
+
+
+
+  asmlib_rpm: "http://download.oracle.com/otn_software/asmlib/oracleasmlib-2.0.4-1.el6.x86_64.rpm"
+  ol6_repo_file: public-yum-ol6.repo
+  repo_dir: /etc/yum.repos.d/
+
+  disable_numa_boot: true
+  percent_hugepages: 50
+  configure_interconnect: false
+  configure_ssh: false
+  configure_host_disks: false
+  configure_etc_hosts: false
+  configure_cluster: false
+  device_persistence: asmlib
+  install_os_packages: false
+  disable_selinux: true
+
+
+# pramètres de configuation sécurisée :
+  linux_secure_config:
+      - { name: net.ipv4.conf.all.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.secure_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.secure_redirects, value: 0 }
+      - { name: net.ipv4.ip_forward, value: 0 }
+      - { name: net.ipv6.conf.all.accept_redirects, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv4.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv6.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv6.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv4.conf.all.log_martians, value: 1 } 
+      - { name: net.ipv4.conf.default.log_martians, value: 1 }
+      - { name: net.ipv4.icmp_echo_ignore_broadcasts, value: 1 }
+      - { name: net.ipv4.icmp_ignore_bogus_error_responses, value: 1 }
+      - { name: net.ipv6.conf.all.accept_ra, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_ra, value: 0 }
+
+
+# packages à installer pour Linux
+  common_packages:
+      - bc
+      - bind-utils
+      - btrfs-progs
+      - cloog-ppl
+      - compat-libcap1
+      - ethtool
+      - expect
+      - git
+      - htop
+      - lvm2
+      - make
+      - module-init-tools
+      - mpfr
+      - multitail
+      - ncurses-devel
+      - ncurses-libs
+      - nfs-utils
+      - nscd
+      - nss-softokn-freebl
+      - ntp
+      - openssh-clients
+      - ppl
+      - procps
+      - readline
+      - rlwrap
+      - screen
+      - sysstat
+      - system-config-lvm
+      - tigervnc-server
+      - tree
+      - twm
+      - unzip
+      - wget
+      - vim
+      - xfsprogs
+      
+# services Linux à désactiver :
+  linux_services:
+      - bluetooth
+      - cups
+      - gpm
+      - hidd
+      - hplip
+      - isdn
+      - sendmail
+      - smartd
+      - avahi-daemon
+      - NetworkManager
+      - rhnsd
+      - firstboot
+      - chronyd
+      - ip6tables
+      - iptables
+      - firewalld

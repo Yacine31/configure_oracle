@@ -1,0 +1,39 @@
+---
+  # --------------------------------------------------- 
+  # configuration Linux : grub
+  # ---------------------------------------------------
+  - name: Désactivation de Transparent Hugepages 1/2 (dans grub.conf)
+    shell: grubby --grub2 --remove-args=transparent_hugepage --update-kernel=ALL
+    tags: tphp
+
+  - name: Désactivation de Transparent Hugepages 2/2 (dans grub.conf)
+    shell: grubby --grub2 --args=transparent_hugepage=never --update-kernel=ALL
+    tags: tphp
+
+  - name: Désactivation de Numa 1/2 (dans grub.conf)
+    shell: grubby --grub2 --remove-args=numa --update-kernel=ALL
+    tags: numa
+
+  - name: Désactivation de Numa 2/2 (dans grub.conf)
+    shell: grubby --grub2 --args=numa=off --update-kernel=ALL
+    tags: numa
+
+  - name: Activation DeadLine 1/2 (dans grub.conf)
+    shell: grubby --grub2 --remove-args=elevator --update-kernel=ALL
+    tags: deadline
+
+  - name: Activation DeadLine 2/2 (dans grub.conf)
+    shell: grubby --grub2 --args=elevator=deadline --update-kernel=ALL
+    tags: deadline
+
+  - name: Suppression de rhgb de /etc/grub.conf
+    shell: grubby --grub2 --remove-args=rhgb --update-kernel=ALL
+    tags: rhgb
+
+  - name: Suppression de quiet de /etc/grub.conf
+    shell: grubby --grub2 --remove-args=quiet --update-kernel=ALL
+    tags: quiet
+
+  - name: Configuration du mode 3 comme mode de démarrage par défaut
+    replace: dest=/etc/inittab regexp='id:5:initdefault:' replace='id:3:initdefault:'
+

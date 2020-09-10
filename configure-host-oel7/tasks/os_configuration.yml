@@ -1,0 +1,103 @@
+---
+  # --------------------------------------------------- 
+  # configuration des packages necessaires pour Linux
+  # ---------------------------------------------------
+  - name: Installation du packet libselinux-python
+    yum: name="libselinux-python" state=installed
+
+#  - name: Installation du RPM EPEL Repo pour Linux 7
+#    yum: name="{{ epel_rpm }}" state=installed
+#    tags: epelrepo
+
+#  - name: Copie du fichier repository public-yum si absent
+#    copy: src=public-yum-ol7.repo dest=/etc/yum.repos.d/public-yum-ol7.repo
+#    tags: publicyumrepo
+
+  - name: Installation des packages communs pour Linux
+    yum: name={{ item }} state=installed
+    tags: commonpackages
+    with_items:
+      - bind-utils
+      - xdpyinfo
+      - xauth
+      - net-tools
+      - ethtool
+      - nscd
+      - ntp
+      - sysstat
+      - tree
+      - unzip
+      - wget
+      - vim
+#      - htop
+#      - rlwrap
+      - lvm2
+      - ncurses
+      - nfs-utils
+      - readline
+      - xfsprogs
+      - system-storage-manager
+
+  - name: Configuratio du mode panic sur perte du /
+    shell: free_form="tune2fs -e panic `df -P / |tail -1 | awk '{print $1}'`"
+
+  - name: Configuratio du mode panic sur bug du kernel
+    sysctl: name=kernel.panic_on_oops value=1 state=present reload=yes ignoreerrors=yes
+
+  # --------------------------------------------------- 
+  # configuration du serveur NTPD
+  # ---------------------------------------------------
+  - name: Modification de la configuration NTP configuration (ajout du flag -x)
+    lineinfile: dest=/etc/sysconfig/ntpd
+              regexp='^OPTIONS='
+              line='OPTIONS="-x -u ntp:ntp -p /var/run/ntpd.pid -g"'
+              state=present
+              create=yes
+
+  - name: restart ntpd
+    service: name=ntpd  state=started  enabled=yes
+ 
+  # --------------------------------------------------- 
+  # configuration Linux : Selinux
+  # ---------------------------------------------------
+  - name: Disactiver Selinux (de façon permanente)
+    selinux: state=disabled
+    tags: selinux
+    register: selinux
+  
+  - name: Disactiver Selinux (runtime)
+    shell: setenforce 0
+    tags: selinux
+    ignore_errors: true
+ 
+  # --------------------------------------------------- 
+  # configuration Linux : les services
+  # ---------------------------------------------------
+  - name: arrêter et désactiver les services inutils
+    service: name={{ item }}  state=stopped  enabled=no
+    tags: linuxservices
+    ignore_errors: true
+    with_items:
+      - bluetooth
+      - cups
+      - gpm
+      - hidd
+      - hplip
+      - isdn
+      - sendmail
+      - smartd
+      - avahi-daemon
+      - NetworkManager
+      - rhnsd
+      - firstboot
+      - chronyd
+      - ip6tables
+      - iptables
+      - firewalld
+
+  # --------------------------------------------------- 
+  # configuration du démarrage en mode 3 par défaut
+  # ---------------------------------------------------
+  - name: configuration du démarrage en mode 3 par défaut
+    command: systemctl set-default multi-user.target
+

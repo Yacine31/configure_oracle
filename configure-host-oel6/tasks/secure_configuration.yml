@@ -1,0 +1,34 @@
+---
+  # --------------------------------------------------- 
+  # configuration Linux : Sécurisation
+  # ---------------------------------------------------
+  - name: Ajout du soft reboot
+    lineinfile: dest=/etc/rc.local state=present line='/sbin/ctrlaltdel soft'
+    tags: softreboot
+  
+  - name: Sécurisation du vidage mémoire
+    copy: src="00-vidage.conf" dest="/etc/security/limits.d/00-vidage.conf"
+  
+  - name: Application des paramètres de configuration sécurisée
+    sysctl: name="{{ item.name }}" value="{{ item.value }}" state=present reload=yes ignoreerrors=yes
+    when: secure_configuration
+    with_items: 
+      - { name: net.ipv4.conf.all.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.secure_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.secure_redirects, value: 0 }
+      - { name: net.ipv4.ip_forward, value: 0 }
+      - { name: net.ipv6.conf.all.accept_redirects, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv4.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv6.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv6.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv4.conf.all.log_martians, value: 1 } 
+      - { name: net.ipv4.conf.default.log_martians, value: 1 }
+      - { name: net.ipv4.icmp_echo_ignore_broadcasts, value: 1 }
+      - { name: net.ipv4.icmp_ignore_bogus_error_responses, value: 1 }
+      - { name: net.ipv6.conf.all.accept_ra, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_ra, value: 0 }
+    tags: secure_config
+  

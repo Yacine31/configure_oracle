@@ -1,0 +1,7 @@
+# Fichier de paramètres 
+---
+
+  vars_files: 
+    - linux_settings.yml        # tous les parametres de configuration pour Linux
+    - oracle_users.yml          # les comptes et groupes Oracle 
+    - oracle_settings.yml       # les parametres kernel et packages Oracle à installer
