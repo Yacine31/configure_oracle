@@ -20,4 +20,4 @@ récupérer mes playbooks dans /root
 # git clone https://github.com/Yacine31/configure_oracle
 
 
-# python ansible-playbook configure_oracle/book-config-oel-6-7.yml -i hosts.oracle
+# python ansible-playbook configure_oracle/book-config-oel-6-7.yml -i configure_oracle/hosts.oracle
