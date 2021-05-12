@@ -17,10 +17,6 @@ localhost ansible_connection=local
 
 $ pwd = /root
 récupérer mes playbooks dans /root
-$ wget https://github.com/Yacine31/configure_oracle/archive/2020.09.10.zip
-
-$ unzip 2020.09.10.zip
-
-$ mv configure_oracle-2020.09.10/* .
+# git clone https://github.com/Yacine31/configure_oracle
 
 $ python ansible-playbook book-config-oel-6-7.yml -i hosts.oracle
