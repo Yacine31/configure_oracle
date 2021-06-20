@@ -8,6 +8,7 @@
   
   - name: Sécurisation du vidage mémoire
     copy: src="00-vidage.conf" dest="/etc/security/limits.d/00-vidage.conf"
+    tags: secu_vidage
   
   - name: Application des paramètres de configuration sécurisée
     sysctl: name="{{ item.name }}" 

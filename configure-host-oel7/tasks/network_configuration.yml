@@ -21,6 +21,7 @@
     with_items:
      - { line: "options attempts:2" }
      - { line: "options timeout:1" }
+    tags: resolv_conf
   
   - name: Desactivation de IP v6 et ZeroConf (Doc ID 1161144.1)
     lineinfile: dest=/etc/sysconfig/network line="{{ item.line }}"
@@ -28,6 +29,8 @@
      - { line: "NETWORKING_IPV6=no" }
      - { line: "IPV6INIT=no" }
      - { line: "NOZEROCONF=yes" }
+    tags: ipv6
 
   - name: desactivation permanente de ipv6
     copy: src=desactivation_ipv6.conf dest=/etc/modprobe.d/desactivation_ipv6.conf
+    tags: ipv6

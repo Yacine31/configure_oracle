@@ -4,11 +4,11 @@
   # ---------------------------------------------------
   - name: Désactivation de Transparent Hugepages 1/2 (dans grub.conf)
     shell: grubby --grub2 --remove-args=transparent_hugepage --update-kernel=ALL
-    tags: tphp
+    tags: transparent_huge_page
 
   - name: Désactivation de Transparent Hugepages 2/2 (dans grub.conf)
     shell: grubby --grub2 --args=transparent_hugepage=never --update-kernel=ALL
-    tags: tphp
+    tags: transparent_huge_page
 
   - name: Désactivation de Numa 1/2 (dans grub.conf)
     shell: grubby --grub2 --remove-args=numa --update-kernel=ALL

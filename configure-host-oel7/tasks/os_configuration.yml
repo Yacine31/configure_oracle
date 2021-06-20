@@ -28,28 +28,31 @@
         - xauth
         - xdpyinfo
         - xfsprogs
+    tags: rpm_packages
 
   # --------------------------------------------------- 
   # configuration Linux : Mode panic
   # ---------------------------------------------------
   - name: Configuratio du mode panic sur perte du /
     shell: free_form="tune2fs -e panic `df -P / |tail -1 | awk '{print $1}'`"
+    tags: mode_panic
 
   - name: Configuratio du mode panic sur bug du kernel
     sysctl: name=kernel.panic_on_oops value=1 state=present reload=yes ignoreerrors=yes
+    tags: mode_panic
  
   # --------------------------------------------------- 
   # configuration Linux : Selinux
   # ---------------------------------------------------
   - name: Disactiver Selinux (de façon permanente)
     selinux: state=disabled
-    tags: selinux
     register: selinux
+    tags: selinux
   
   - name: Disactiver Selinux (runtime)
     shell: setenforce 0
-    tags: selinux
     ignore_errors: true
+    tags: selinux
  
   # --------------------------------------------------- 
   # configuration Linux : les services
@@ -79,4 +82,5 @@
   # ---------------------------------------------------
   - name: configuration du démarrage en mode 3 par défaut
     command: systemctl set-default multi-user.target
+    tags: init3
 
