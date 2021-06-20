@@ -1,24 +1,15 @@
 ---
 # création des répertoires Oracle
 #
-# exemple :
-# oracle_racine         /u01/app
-# oracle_base           /u01/app/oracle
-# oracle_home           /u01/app/oracle/12.1.0.2.dbhome_1
-# grid_home             /u01/app/12.1.0.2/grid
-# stage                 /u01/stage
-#
 
-  - name: Création du répertoire stage
-    file: dest={{ oracle_stage }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory
-    tags: directoriesdb
-
-  - name: Création du répertoire ORACLE_BASE
-    file: dest={{ oracle_base }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory
-    tags: directoriesdb
-
-  - name: Création du répertoire ORACLE_HOME
-    file: dest={{ oracle_home }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory
-    with_items: oracle_databases
+  - name: Création du répertoire oracle
+    file: dest={{ directoriesdb }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory
+    vars:
+      directoriesdb:
+        - /u01/app
+        - /u01/app/oracle
+        - /u01/app/oraInventory
+        - /u01/app/oracle/product/19.0.0/dbhome_1
+        - /u01/sources
     tags: directoriesdb
 
