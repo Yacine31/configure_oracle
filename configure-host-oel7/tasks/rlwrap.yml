@@ -6,5 +6,5 @@
 
   - name: Install rlwrap rpm from a local file
     yum:
-      name: rlwrap-0.44-1.el8.x86_64.rpm
+      name: /tmp/rlwrap-0.44-1.el8.x86_64.rpm
       state: present
