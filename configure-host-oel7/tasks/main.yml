@@ -39,8 +39,13 @@
   # ---------------------------------------------------
   # configuration Linux : aliases bash & oracle
   # ---------------------------------------------------
-  - name: Ajout du fichier z_oracle dans /etc/profile.d
+  - name: Ajout du fichier bash_aliases dans /etc/profile.d
     copy: src=bash_aliases dest=/etc/profile.d/bash_aliases.sh owner=root mode=644
+
+  # ---------------------------------------------------
+  # configuration Linux : personnalisation rlwrap
+  # ---------------------------------------------------
+  - include: rlwrap.yml
 
   # ---------------------------------------------------
   # configuration Linux : Sécurisation
