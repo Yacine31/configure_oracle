@@ -36,13 +36,14 @@ if [ $USER = "grid" ] || [ $USER = "oracle" ] || [ $USER = "root" ] ; then
         fi
     fi
 
-    # prompt coloré
-    vert=$(tput setaf 2)
-    bleu=$(tput setaf 4)
-    gras=$(tput bold)
-    rouge=$(tput setaf 1)
-    reset=$(tput sgr0)
-
 fi
 
-export PS1='[\[$bleu\]\u\[$reset\]@\[$vert\]\h\[$reset\] \[$rouge\]${TWO_TASK:-$ORACLE_SID}\[$reset\] \W]\$ '
+# prompt coloré
+rouge=$(tput setaf 1)
+vert=$(tput setaf 2)
+jaune=$(tput setaf 3)
+bleu=$(tput setaf 4)
+gras=$(tput bold)
+reset=$(tput sgr0)
+
+export PS1='[\[$jaune\]\u\[$reset\]@\[$vert\]\h\[$reset\] \[$rouge\]${TWO_TASK:-$ORACLE_SID}\[$reset\] \W]\$ '
