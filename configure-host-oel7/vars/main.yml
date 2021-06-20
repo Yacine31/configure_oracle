@@ -123,9 +123,9 @@
       - binutils
       - btrfs-progs
       - cloog-ppl
-      - compat-libcap1
-      - compat-libstdc++*i686
-      - compat-libstdc++-33
+#      - compat-libcap1
+#      - compat-libstdc++*i686
+#      - compat-libstdc++-33
       - cpp
       - ethtool
       - gcc
