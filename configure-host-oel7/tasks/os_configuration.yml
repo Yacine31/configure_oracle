@@ -2,46 +2,38 @@
   # --------------------------------------------------- 
   # configuration des packages necessaires pour Linux
   # ---------------------------------------------------
-  #  - name: Installation du packet libselinux-python
-  #    yum: name="libselinux-python" state=installed
-
   - name: Installation des packages communs pour Linux
     yum: name={{ item }} state=installed
     tags: linux_packages
     with_items:
       - bind-utils
-      - xdpyinfo
-      - xauth
-      - net-tools
+      - chrony
       - ethtool
-      - nscd
-      - sysstat
-      - tree
-      - unzip
-      - wget
-      - vim
       - lvm2
       - nc
       - ncurses
+      - net-tools
       - nfs-utils
+      - nscd
       - readline
-      - xfsprogs
+      - sysstat
       - system-storage-manager
+      - tree
+      - unzip
+      - vim
+      - wget
+      - xauth
+      - xdpyinfo
+      - xfsprogs
 
+  # --------------------------------------------------- 
+  # configuration Linux : Mode panic
+  # ---------------------------------------------------
   - name: Configuratio du mode panic sur perte du /
     shell: free_form="tune2fs -e panic `df -P / |tail -1 | awk '{print $1}'`"
 
   - name: Configuratio du mode panic sur bug du kernel
     sysctl: name=kernel.panic_on_oops value=1 state=present reload=yes ignoreerrors=yes
-
-  # --------------------------------------------------- 
-  # Installation du package chrony
-  # ---------------------------------------------------
-  - name: Installation du package chrony
-    yum: name="chrony" state=installed
-
-  - name: restart chronyd
-    service: name=chronyd  state=started  enabled=yes
  
   # --------------------------------------------------- 
   # configuration Linux : Selinux
