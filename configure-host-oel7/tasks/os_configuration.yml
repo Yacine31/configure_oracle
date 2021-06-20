@@ -2,8 +2,8 @@
   # --------------------------------------------------- 
   # configuration des packages necessaires pour Linux
   # ---------------------------------------------------
-  - name: Installation du packet libselinux-python
-    yum: name="libselinux-python" state=installed
+  #  - name: Installation du packet libselinux-python
+  #    yum: name="libselinux-python" state=installed
 
   - name: Installation des packages communs pour Linux
     yum: name={{ linux_packages }} state=installed
