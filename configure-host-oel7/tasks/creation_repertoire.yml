@@ -18,6 +18,7 @@
     file: dest={{ directoriesdb }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory recurse=yes
     vars:
       directoriesdb:
+        - /u01
         - /u01/app
         - /u01/app/oracle
         - /u01/app/oraInventory
