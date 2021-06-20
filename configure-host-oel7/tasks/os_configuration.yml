@@ -8,7 +8,7 @@
   - name: Installation des packages communs pour Linux
     yum: name={{ items }} state=installed
     tags: linux_packages
-    loop:
+    with_items:
       - bind-utils
       - xdpyinfo
       - xauth
@@ -68,7 +68,7 @@
     service: name={{ item }}  state=stopped  enabled=no
     tags: linuxservices
     ignore_errors: true
-    loop:
+    with_items:
       - bluetooth
       - cups
       - gpm
