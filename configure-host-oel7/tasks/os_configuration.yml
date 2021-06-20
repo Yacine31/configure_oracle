@@ -15,7 +15,6 @@
       - net-tools
       - ethtool
       - nscd
-#      - ntp
       - sysstat
       - tree
       - unzip
@@ -36,17 +35,13 @@
     sysctl: name=kernel.panic_on_oops value=1 state=present reload=yes ignoreerrors=yes
 
   # --------------------------------------------------- 
-  # configuration du serveur NTPD
+  # Installation du package chrony
   # ---------------------------------------------------
-  - name: Modification de la configuration NTP configuration (ajout du flag -x)
-    lineinfile: dest=/etc/sysconfig/ntpd
-              regexp='^OPTIONS='
-              line='OPTIONS="-x -u ntp:ntp -p /var/run/ntpd.pid -g"'
-              state=present
-              create=yes
+  - name: Installation du package chrony
+    yum: name="chrony" state=installed
 
-  #  - name: restart ntpd
-  #    service: name=ntpd  state=started  enabled=yes
+  - name: restart chronyd
+    service: name=chronyd  state=started  enabled=yes
  
   # --------------------------------------------------- 
   # configuration Linux : Selinux
