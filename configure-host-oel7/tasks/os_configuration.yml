@@ -45,8 +45,8 @@
               state=present
               create=yes
 
-  - name: restart ntpd
-    service: name=ntpd  state=started  enabled=yes
+  #  - name: restart ntpd
+  #    service: name=ntpd  state=started  enabled=yes
  
   # --------------------------------------------------- 
   # configuration Linux : Selinux
