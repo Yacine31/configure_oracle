@@ -39,8 +39,8 @@
   # ---------------------------------------------------
   # configuration Linux : aliases bash & oracle
   # ---------------------------------------------------
-  - name: Ajout du fichier bash_aliases dans /etc/profile.d
-    copy: src=bash_aliases dest=/etc/profile.d/z_bash_aliases.sh owner=root mode=644
+  - name: Ajout du fichier z_bash_aliases dans /etc/profile.d
+    copy: src=z_bash_aliases dest=/etc/profile.d/z_bash_aliases.sh owner=root mode=644
 
   # ---------------------------------------------------
   # configuration Linux : personnalisation rlwrap
@@ -55,7 +55,7 @@
   # ---------------------------------------------------
   # configuration des packages necessaires pour Oracle
   # ---------------------------------------------------
-  - name: Installation des packages pour Oracleeee
+  - name: Installation des packages pour Oracle
     yum: name={{ packages }} state=installed skip_broken=true
     vars:
       packages:

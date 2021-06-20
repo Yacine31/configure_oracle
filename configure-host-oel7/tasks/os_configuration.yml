@@ -3,28 +3,31 @@
   # configuration des packages necessaires pour Linux
   # ---------------------------------------------------
   - name: Installation des packages communs pour Linux
-    yum: name={{ item }} state=installed
-    tags: linux_packages
-    with_items:
-      - bind-utils
-      - chrony
-      - ethtool
-      - lvm2
-      - nc
-      - ncurses
-      - net-tools
-      - nfs-utils
-      - nscd
-      - readline
-      - sysstat
-      - system-storage-manager
-      - tree
-      - unzip
-      - vim
-      - wget
-      - xauth
-      - xdpyinfo
-      - xfsprogs
+    yum: name={{ rpm_package }} state=installed
+#    yum: name={{ item }} state=installed
+#    tags: linux_packages
+#    with_items:
+    vars:
+      rpm_package:
+        - bind-utils
+        - chrony
+        - ethtool
+        - lvm2
+        - nc
+        - ncurses
+        - net-tools
+        - nfs-utils
+        - nscd
+        - readline
+        - sysstat
+        - system-storage-manager
+        - tree
+        - unzip
+        - vim
+        - wget
+        - xauth
+        - xdpyinfo
+        - xfsprogs
 
   # --------------------------------------------------- 
   # configuration Linux : Mode panic
