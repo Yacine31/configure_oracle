@@ -6,7 +6,7 @@
   #    yum: name="libselinux-python" state=installed
 
   - name: Installation des packages communs pour Linux
-    yum: name={{ linux_packages }} state=installed
+    yum: name={{ items }} state=installed
     tags: linux_packages
     loop:
       - bind-utils
