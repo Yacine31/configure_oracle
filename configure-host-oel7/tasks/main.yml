@@ -40,7 +40,7 @@
   # configuration Linux : aliases bash & oracle
   # ---------------------------------------------------
   - name: Ajout du fichier bash_aliases dans /etc/profile.d
-    copy: src=bash_aliases dest=/etc/profile.d/bash_aliases.sh owner=root mode=644
+    copy: src=bash_aliases dest=/etc/profile.d/z_bash_aliases.sh owner=root mode=644
 
   # ---------------------------------------------------
   # configuration Linux : personnalisation rlwrap
@@ -75,7 +75,6 @@
         - libaio-devel 
         - libaio-devel*i686 
         - libgcc 
-#        - libgcc*i686 
         - libstdc++
         - libstdc++*i686 
         - libstdc++-devel 
@@ -111,7 +110,7 @@
   # Securisation de cron
   # ---------------------------------------------------
   - name: Desactivation de la commande crontab -r 
-    lineinfile: dest=/etc/profile.d/you.sh
+    lineinfile: dest=/etc/profile.d/z_crontab_r.sh
           line='crontab () { [[ $@ =~ -[iel]*r ]] && echo "option -r (remove) not allowed" || command crontab "$@" ;}'
           state=present
           create=yes

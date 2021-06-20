@@ -34,6 +34,3 @@
     shell: grubby --grub2 --remove-args=quiet --update-kernel=ALL
     tags: quiet
 
-  - name: Configuration du mode 3 comme mode de démarrage par défaut
-    replace: dest=/etc/inittab regexp='id:5:initdefault:' replace='id:3:initdefault:'
-
