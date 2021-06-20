@@ -15,7 +15,7 @@
 # ./runInstaller
 
   - name: Création du répertoire oracle
-    file: dest={{ directoriesdb }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory
+    file: dest={{ directoriesdb }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory recurse=yes
     vars:
       directoriesdb:
         - /u01/app
