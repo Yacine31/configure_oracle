@@ -100,7 +100,7 @@
   # ---------------------------------------------------
   # configuration Linux : Création des répertoires Oracle
   # ---------------------------------------------------
-#  - include: creation_repertoire.yml
+  - include: creation_repertoire.yml
 
   # ---------------------------------------------------
   # Securisation de cron
