@@ -1,9 +1,9 @@
 ---
 
-#  - name: Vérification de la distribution, la version et le kernel
-#    assert:
-#      that: ansible_distribution_major_version == '7' and ansible_os_family == 'RedHat' and ansible_kernel >= '3.8.13'
-#    tags: oscheck
+  - name: Vérification de la distribution, la version et le kernel
+    assert:
+      that: ansible_distribution_major_version >= '7' and ansible_os_family == 'RedHat' and ansible_kernel >= '3.8.13'
+    tags: oscheck
 
   # ---------------------------------------------------
   # configuration des packages necessaires pour Linux

@@ -5,18 +5,10 @@
   - name: Installation du packet libselinux-python
     yum: name="libselinux-python" state=installed
 
-#  - name: Installation du RPM EPEL Repo pour Linux 7
-#    yum: name="{{ epel_rpm }}" state=installed
-#    tags: epelrepo
-
-#  - name: Copie du fichier repository public-yum si absent
-#    copy: src=public-yum-ol7.repo dest=/etc/yum.repos.d/public-yum-ol7.repo
-#    tags: publicyumrepo
-
   - name: Installation des packages communs pour Linux
-    yum: name={{ item }} state=installed
-    tags: commonpackages
-    with_items:
+    yum: name={{ linux_packages }} state=installed
+    tags: linux_packages
+    loop:
       - bind-utils
       - xdpyinfo
       - xauth
@@ -29,8 +21,6 @@
       - unzip
       - wget
       - vim
-#      - htop
-#      - rlwrap
       - lvm2
       - nc
       - ncurses
@@ -78,7 +68,7 @@
     service: name={{ item }}  state=stopped  enabled=no
     tags: linuxservices
     ignore_errors: true
-    with_items:
+    loop:
       - bluetooth
       - cups
       - gpm

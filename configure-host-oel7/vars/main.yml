@@ -1,26 +1,35 @@
+---
 # Fichier de paramètres 
 ---
   #----------------------------------------------------------------------
   # paramètres généraux
   #----------------------------------------------------------------------
-  internet_connection: true
-  configure_epel_repo: true
-  epel_rpm: "http://mirrors.ircam.fr/pub/fedora/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm"
 
   linux_version: "{{ ansible_distribution_major_version }}"
+
+  disable_numa_boot: true
+  disable_selinux: true
+
+  secure_configuration: false      # faire une configuration securisee du system d exploitation
+
+  disable_numa_boot: true
+  configure_cluster: false
+  install_os_packages: true
+  disable_selinux: true
+
 
   #----------------------------------------------------------------------
   # Groupes et utilisateurs
   #----------------------------------------------------------------------
 
   oracle_groups:
-    - { group: asmdba, gid: 1004 }
-    - { group: asmoper, gid: 1005 }
-    - { group: asmadmin, gid: 1003 }
     - { group: oinstall, gid: 1000}
     - { group: dba, gid: 1001 }
-    - { group: backupdba, gid: 1006 }
     - { group: oper, gid: 1002 }
+    - { group: asmadmin, gid: 1003 }
+    - { group: asmdba, gid: 1004 }
+    - { group: asmoper, gid: 1005 }
+    - { group: backupdba, gid: 1006 }
     - { group: dgdba, gid: 1007 }
     - { group: kmdba, gid: 1008 }
 
@@ -69,35 +78,140 @@
       - "* soft core unlimited"
       - "* hard core unlimited"
 
+# services Linux à désactiver :
+  linux_services:
+      - bluetooth
+      - cups
+      - gpm
+      - hidd
+      - hplip
+      - isdn
+      - sendmail
+      - smartd
+      - avahi-daemon
+      - rhnsd
+      - firstboot
+      - chronyd
+      - ip6tables
+      - iptables
+      - firewalld
+
+# pramètres de configuation sécurisée :
+  linux_secure_config:
+      - { name: net.ipv4.conf.all.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.all.secure_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.secure_redirects, value: 0 }
+      - { name: net.ipv4.ip_forward, value: 0 }
+      - { name: net.ipv6.conf.all.accept_redirects, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_redirects, value: 0 }
+      - { name: net.ipv4.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv4.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv6.conf.default.accept_source_route, value: 0 } 
+      - { name: net.ipv6.conf.all.accept_source_route, value: 0 }
+      - { name: net.ipv4.conf.all.log_martians, value: 1 } 
+      - { name: net.ipv4.conf.default.log_martians, value: 1 }
+      - { name: net.ipv4.icmp_echo_ignore_broadcasts, value: 1 }
+      - { name: net.ipv4.icmp_ignore_bogus_error_responses, value: 1 }
+      - { name: net.ipv6.conf.all.accept_ra, value: 0 } 
+      - { name: net.ipv6.conf.default.accept_ra, value: 0 }
+
   #----------------------------------------------------------------------
   # packages linux necessaires avant d'installer Oracle
   #----------------------------------------------------------------------
   oracle_packages:
+      - bind-utils
       - binutils
+      - btrfs-progs
+      - cloog-ppl
       - compat-libcap1
+      - compat-libstdc++*i686
+      - compat-libstdc++-33
+      - cpp
+      - ethtool
       - gcc
       - gcc-c++
       - glibc
-      - glibc-devel
-      - libaio
-      - libaio-devel
-      - libgcc
-      - libstdc++
-      - libstdc++-devel
-      - libXi
-      - libXtst
-      - make
-      - sysstat
-      - ksh
-      - libXi*i686 
-      - libXtst*i686 
-      - libstdc++-devel*i686 
-      - libaio-devel*i686 
-      - libstdc++*i686 
-      - libgcc
-      - libgcc*i686 
-      - libaio*i686 
-      - glibc-devel*i686 
       - glibc*i686
+      - glibc-devel
+      - glibc-headers
+      - kernel-headers
+      - kmod-oracleasm
+      - ksh
+      - libX11
+      - libX11*i686
+      - libXau
+      - libXau*i686
+      - libXext
+      - libXi
+      - libXp
+      - libXt
+      - libXtst
+      - libaio
+      - libaio*i686
+      - libaio-devel
+      - libaio-devel*i686
+      - libgcc
+      - libselinux-python
+      - libstdc++
+      - libstdc++*i686
+      - libstdc++-devel
+      - libstdc++-devel*i686
+      - libtool-ltdl
+      - libxcb
+      - libxcb*i686
+      - make
+      - module-init-tools
+      - mpfr
+      - ncurses-devel
+      - ncurses-libs
+      - nfs-utils
+      - nscd
+      - ntp
+      - openssh-clients
+      - oracleasm-support
+      - parted
+      - ppl
+      - procps
+      - readline
+      - readline-devel
+      - sysstat
+      - twm
       - unixODBC
+      - util-linux-ng
+      - vim-enhanced
+      - xdpyinfo
+      - xfsprogs
+      - xorg-x11-utils
+      - xorg-x11-xauth
+      - xorg-x11-xinit
+      - xsetroot
+      - xterm
+#      - binutils
+#      - compat-libcap1
+#      - gcc
+#      - gcc-c++
+#      - glibc
+#      - glibc-devel
+#      - libaio
+#      - libaio-devel
+#      - libgcc
+#      - libstdc++
+#      - libstdc++-devel
+#      - libXi
+#      - libXtst
+#      - make
+#      - sysstat
+#      - ksh
+#      - libXi*i686 
+#      - libXtst*i686 
+#      - libstdc++-devel*i686 
+#      - libaio-devel*i686 
+#      - libstdc++*i686 
+#      - libgcc
+#      - libgcc*i686 
+#      - libaio*i686 
+#      - glibc-devel*i686 
+#      - glibc*i686
+#      - unixODBC
 
