@@ -1,7 +1,10 @@
 ---
 # installation de l'utilitaire rlwrap pour oracle
 
-- name: Install nginx rpm from a local file
-  yum:
-    src: rlwrap-0.44-1.el8.x86_64.rpm
-    state: present
+  - name: Copy du rpm rlwrap vers le serveur
+    copy: src=rlwrap-0.44-1.el8.x86_64.rpm dest=/tmp/rlwrap-0.44-1.el8.x86_64.rpm owner=root mode=644
+
+  - name: Install rlwrap rpm from a local file
+    yum:
+      name: rlwrap-0.44-1.el8.x86_64.rpm
+      state: present
