@@ -101,10 +101,10 @@
       - sendmail
       - smartd
       - avahi-daemon
-      - NetworkManager
       - rhnsd
       - firstboot
       - chronyd
       - ip6tables
       - iptables
       - firewalld
+#      - NetworkManager
