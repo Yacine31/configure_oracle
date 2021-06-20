@@ -8,3 +8,6 @@
     yum:
       name: /tmp/rlwrap-0.44-1.el8.x86_64.rpm
       state: present
+
+  - name: suppression du rpm rlwrap du serveur
+    file: path=/tmp/rlwrap-0.44-1.el8.x86_64.rpm state=absent
