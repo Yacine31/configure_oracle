@@ -57,7 +57,7 @@
   # ---------------------------------------------------
   - name: Installation des packages pour Oracle
     yum: name={{ packages }} state=installed skip_broken=true
-    vars:
+    vars: 
       packages:
         - bc
         - binutils
