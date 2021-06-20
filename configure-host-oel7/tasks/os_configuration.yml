@@ -15,7 +15,7 @@
       - net-tools
       - ethtool
       - nscd
-      - ntp
+#      - ntp
       - sysstat
       - tree
       - unzip
