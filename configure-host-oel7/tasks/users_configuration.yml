@@ -11,7 +11,6 @@
       - { group: asmoper, gid: 1005 }
       - { group: asmadmin, gid: 1003 }
       - { group: oinstall, gid: 1000}
-      - { group: orainstall, gid: 1009}
       - { group: dba, gid: 1001 }
       - { group: backupdba, gid: 1006 }
       - { group: oper, gid: 1002 }
