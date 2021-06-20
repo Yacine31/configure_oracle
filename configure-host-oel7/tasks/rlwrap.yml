@@ -1,0 +1,7 @@
+---
+# installation de l'utilitaire rlwrap pour oracle
+
+- name: Install nginx rpm from a local file
+  yum:
+    name: rlwrap-0.44-1.el8.x86_64.rpm
+    state: present

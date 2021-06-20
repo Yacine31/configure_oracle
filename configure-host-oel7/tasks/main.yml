@@ -35,7 +35,12 @@
   # ---------------------------------------------------
   - name: Ajout du fichier z_oracle dans /etc/profile.d
     copy: src=z_oracle.sh dest=/etc/profile.d/z_oracle.sh owner=root mode=644
-    tags: z_oracle
+
+  # ---------------------------------------------------
+  # configuration Linux : aliases bash & oracle
+  # ---------------------------------------------------
+  - name: Ajout du fichier z_oracle dans /etc/profile.d
+    copy: src=bash_aliases dest=/etc/profile.d/bash_aliases.sh owner=root mode=644
 
   # ---------------------------------------------------
   # configuration Linux : Sécurisation
@@ -47,14 +52,10 @@
   # ---------------------------------------------------
   - name: Installation des packages pour Oracleeee
     yum: name={{ packages }} state=installed skip_broken=true
-#    with_items: 
     vars:
       packages:
         - bc
         - binutils
-#        - compat-libcap1 
-#        - compat-libstdc++-33 
-#        - compat-libstdc++-33*i686 
         - elfutils-libelf-devel 
         - gcc 
         - gcc-c++ 
@@ -95,7 +96,6 @@
         - sysstat
         - unixODBC 
     tags: os_packages
-#    when: install_os_packages and internet_connection
 
   # ---------------------------------------------------
   # configuration Linux : Création des répertoires Oracle
