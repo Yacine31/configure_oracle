@@ -5,7 +5,8 @@
   - name: Ajustement des paramètres du Kernel sysctl.conf
     sysctl: name={{ item.name }} value="{{ item.value }}" state=present reload=yes ignoreerrors=yes sysctl_file=/etc/sysctl.conf
     with_items: 
-      - { name: kernel.shmall, value: "{{ ((0.4 * ansible_memtotal_mb)*1024*1024)|round|int  }}" }
+      # shmall = 50% de la RAM pour les SGA Oracle, divisé par PAGE_SIZE (getconf PAGE_SIZE = 4096)
+      - { name: kernel.shmall, value: "{{ ((0.8 * ansible_memtotal_mb)*1024*1024/4096)|round|int  }}" }
 #      - { name: kernel.shmmax, value: "{{ ((0.55 * ansible_memtotal_mb)*1024*1024)|round|int  }}" }
       - { name: kernel.shmmax, value: 4398046511104 }
       - { name: kernel.shmmni, value: 4096 }
@@ -37,7 +38,7 @@
       - "* hard memlock {{ [((0.9 * ansible_memtotal_mb)*1024)|round|int,134217728] | max }}"
       - "* soft stack 10240"
       - "* hard stack 32768"
-      - "* soft core  unlimited"
-      - "* hard core  unlimited"
+      - "* soft core unlimited"
+      - "* hard core unlimited"
     tags: seclimit
   
