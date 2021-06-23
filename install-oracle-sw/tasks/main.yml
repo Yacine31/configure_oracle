@@ -16,4 +16,3 @@
     when: install_database
 
   - include: scripts_exploitation.yml
-

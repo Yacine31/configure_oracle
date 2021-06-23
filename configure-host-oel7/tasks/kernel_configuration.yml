@@ -6,8 +6,9 @@
     sysctl: name={{ item.name }} value="{{ item.value }}" state=present reload=yes ignoreerrors=yes sysctl_file=/etc/sysctl.conf
     with_items: 
       # shmall = 50% de la RAM pour les SGA Oracle, divisé par PAGE_SIZE (getconf PAGE_SIZE = 4096)
-      - { name: kernel.shmall, value: "{{ ((0.8 * ansible_memtotal_mb)*1024*1024/4096)|round|int  }}" }
-      - { name: kernel.shmmax, value: "{{ ((0.8 * ansible_memtotal_mb)*1024*1024)|round|int  }}" }
+      # on suppose que 60% de la RAM sera affectée aux SGA
+      - { name: kernel.shmall, value: "{{ ((0.7 * ansible_memtotal_mb)*1024*1024/4096)|round|int  }}" }
+#      - { name: kernel.shmmax, value: "{{ ((0.8 * ansible_memtotal_mb)*1024*1024)|round|int  }}" }
 #      - { name: kernel.shmmax, value: 4398046511104 }
       - { name: kernel.shmmni, value: 4096 }
       - { name: kernel.sem, value: "250 32000 100 128" }
