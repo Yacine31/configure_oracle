@@ -10,9 +10,9 @@
 # Set ORA_OWNER to the user id of the owner of the
 # Oracle database in ORACLE_HOME.
 
-ORA_HOME={{ db_home }}
-ORACLE_HOME_LISTENER={{ db_home }}
-ORA_OWNER={{ oracle_user }}
+ORA_HOME={{ oracle_home }}
+ORACLE_HOME_LISTENER={{ oracle_home }}
+ORA_OWNER=oracle
 
 case "$1" in
 'start')

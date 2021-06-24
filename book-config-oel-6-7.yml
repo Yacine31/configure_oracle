@@ -6,5 +6,5 @@
   roles:
    - { role: configure-host-oel6, when: "ansible_distribution_major_version == '6'" }
    - { role: configure-host-oel7, when: "ansible_distribution_major_version >= '7'" }
-#   - install-oracle-sw
+   - install-oracle-sw
 
