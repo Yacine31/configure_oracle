@@ -15,11 +15,11 @@
 # ./runInstaller
 
   - name: Création du répertoire oracle
-    file: dest={{ item }} mode=775 owner={{ oracle_user }} group={{ oracle_group }} state=directory recurse=yes
+    file: dest={{ item }} mode=775 owner=oracle group=oinstall state=directory recurse=yes
     with_items:
-      - /u01/app/oracle
-      - /u01/app/oraInventory
-      - /u01/app/oracle/product/19.0.0/dbhome_1
-      - /u01/sources
+      - {{ oracle_base }}
+      - {{ oracle_inventory }}
+      - {{ oracle_home }}
+      - {{ oracle_sources }}
     tags: directoriesdb
 

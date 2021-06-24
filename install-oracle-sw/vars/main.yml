@@ -4,10 +4,6 @@
 # dans cette section ne rien modifier sauf si besoin
 #--------------------------------------------------------------------
 
-oracle_base: "/u01/app/oracle"
-oracle_inventory: "/u01/app/oraInventory"
-oracle_home: "/u01/app/oracle/product/19.0.0/dbhome_1"
-oracle_stage: "/u01/sources"
 
 # u01_free_space 4 Go pour l'install et 4 Go pour transfert et decompression des zip
 u01_free_space_gb: 8
