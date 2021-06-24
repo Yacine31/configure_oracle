@@ -17,9 +17,9 @@
   - name: Création du répertoire oracle
     file: dest={{ item }} mode=775 owner=oracle group=oinstall state=directory recurse=yes
     with_items:
-      - {{ oracle_base }}
-      - {{ oracle_inventory }}
-      - {{ oracle_home }}
-      - {{ oracle_sources }}
+      - "{{ oracle_base }}"
+      - "{{ oracle_inventory }}"
+      - "{{ oracle_home }}"
+      - "{{ oracle_sources }}"
     tags: directoriesdb
 
