@@ -50,7 +50,7 @@
   # ---------------------------------------------------
   # configuration Linux : Sécurisation
   # ---------------------------------------------------
-#  - include: secure_configuration.yml
+  - include: secure_configuration.yml
 
   # ---------------------------------------------------
   # configuration des packages necessaires pour Oracle
